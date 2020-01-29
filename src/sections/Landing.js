@@ -76,7 +76,7 @@ const LandingPage = () => (
               fontSize={[5, 6, 8]}
               mb={[3, 4, 5]}
             >
-              {`${name}!`}
+              {`Haptic Illusions!`}
             </Heading>
 
             <Heading
