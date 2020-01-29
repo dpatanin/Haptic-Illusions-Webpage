@@ -44,8 +44,8 @@
           }
         },
         "publishedVersion": 1,
-        "firstPublishedAt": "2018-09-07T23:18:56.446Z",
-        "publishedAt": "2018-09-07T23:18:56.446Z"
+        "firstPublishedAt": "2020-01-29T17:12:05.446Z",
+        "publishedAt": "2020-01-29T17:12:05.446Z"
       },
       "displayField": "name",
       "name": "Project",
@@ -639,7 +639,7 @@
       },
       "fields": {
         "name": {
-          "en-US": "Mate"
+          "en-US": "Haptic Illusions"
         },
         "description": {
           "en-US": "Gatsby v2 starter to create a top notch portfolio!"
