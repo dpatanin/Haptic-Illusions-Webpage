@@ -46,27 +46,14 @@ const LandingPage = () => (
     <StaticQuery
       query={graphql`
         query SiteTitleQuery {
-          contentfulAbout {
-            name
-            roles
-            socialLinks {
-              id
-              url
-              name
-              fontAwesomeIcon
-            }
-          }
           site {
             siteMetadata {
-              deterministicBehaviour
+              title
             }
           }
         }
       `}
-      render={({ contentfulAbout, site }) => {
-        const { name, socialLinks, roles } = contentfulAbout;
-        const { deterministicBehaviour } = site.siteMetadata;
-
+      render={({ site }) => {
         return (
           <Fragment>
             <Heading
@@ -88,23 +75,18 @@ const LandingPage = () => (
               style={centerHorizontally}
             >
               <TextLoop interval={5000}>
-                {roles
-                  .sort(() => deterministicBehaviour || Math.random() - 0.5)
-                  .map(text => (
-                    <Text width={[300, 500]} key={text}>
-                      {text}
-                    </Text>
-                  ))}
+                <Text width={[300, 500]}>Images formed and reformed</Text>
+                <Text width={[300, 500]}>Reformed and formed Images</Text>
               </TextLoop>
             </Heading>
 
-            <Flex alignItems="center" justifyContent="center" flexWrap="wrap">
+            {/* <Flex alignItems="center" justifyContent="center" flexWrap="wrap">
               {socialLinks.map(({ id, ...rest }) => (
                 <Box mx={3} fontSize={[5, 6, 6]} key={id}>
                   <SocialLink {...rest} />
                 </Box>
               ))}
-            </Flex>
+            </Flex> */}
             <SectionLink section="about">
               {({ onClick }) => <MouseIcon onClick={onClick} />}
             </SectionLink>

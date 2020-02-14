@@ -138,59 +138,23 @@ const Writing = () => (
       query MediumPostQuery {
         site {
           siteMetadata {
-            isMediumUserDefined
+            title
           }
-        }
-        allMediumPost(limit: 7, sort: { fields: createdAt, order: DESC }) {
-          totalCount
-          edges {
-            node {
-              id
-              uniqueSlug
-              title
-              createdAt(formatString: "MMM YYYY")
-              virtuals {
-                subtitle
-                readingTime
-                previewImage {
-                  imageId
-                }
-              }
-            }
-          }
-        }
-        author: mediumUser {
-          username
-          name
         }
       }
     `}
-    render={({ allMediumPost, site, author }) => {
-      const posts = edgeToArray(allMediumPost).map(parsePost(author));
+    render={({ site }) => {
 
-      const diffAmountArticles = allMediumPost.totalCount - posts.length;
-      if (diffAmountArticles > 0) {
-        posts.push({
-          ...author,
-          id: 'more-field',
-          number: diffAmountArticles,
-          Component: MorePosts,
-        });
-      }
-
-      const { isMediumUserDefined } = site.siteMetadata;
-
-      return (
-        isMediumUserDefined && (
+      return ((
           <Section.Container id="writing" Background={Background}>
             <Section.Header name="Writing" icon="✍️" label="writing" />
-            <CardContainer minWidth="300px">
+            {/* <CardContainer minWidth="300px">
               {posts.map(({ Component, ...rest }) => (
                 <Fade bottom key={rest.id}>
                   <Component {...rest} key={rest.id} />
                 </Fade>
               ))}
-            </CardContainer>
+            </CardContainer> */}
           </Section.Container>
         )
       );

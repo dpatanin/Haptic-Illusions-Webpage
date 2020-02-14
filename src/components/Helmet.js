@@ -5,38 +5,10 @@ import { withTheme } from 'styled-components';
 import PropTypes from 'prop-types';
 
 const Helmet = ({ theme = {} }) => (
-  <StaticQuery
-    query={graphql`
-      query HelmetQuery {
-        contentfulAbout {
-          name
-          description
-          profile {
-            favicon16: resize(width: 16) {
-              src
-            }
-            favicon32: resize(width: 32) {
-              src
-            }
-            bigIcon: resize(width: 192) {
-              src
-            }
-            appleIcon: resize(width: 180) {
-              src
-            }
-          }
-        }
-      }
-    `}
-    render={data => {
-      const { name, description, profile } = data.contentfulAbout;
-      const title = `${name} Portfolio`;
-
-      return (
         <ReactHelmet htmlAttributes={{ lang: 'en' }}>
           <meta charSet="utf-8" />
-          <title>{title}</title>
-          <meta name="description" content={description} />
+          <title>Haptic Illusions</title>
+          {/* <meta name="description" content={description} />
           <link rel="shortcut icon" href={`https:${profile.favicon32.src}`} />
           <meta name="theme-color" content={theme.background} />
           <meta name="image" content={`https:${profile.favicon32.src}`} />
@@ -73,11 +45,8 @@ const Helmet = ({ theme = {} }) => (
             type="image/png"
             sizes="16x16"
             href={`https:${profile.favicon16.src}`}
-          />
+          /> */}
         </ReactHelmet>
-      );
-    }}
-  />
 );
 
 Helmet.propTypes = {
