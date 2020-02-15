@@ -177,7 +177,7 @@ Project.propTypes = {
 
 const Projects = () => (
   <Section.Container id="projects" Background={Background}>
-    <Section.Header name="Projects" icon="💻" label="notebook" />
+    <Section.Header name="Project" icon="💻" label="notebook" />
         {/* <CardContainer minWidth="350px">
           {contentfulAbout.projects.map((p, i) => (
             <Fade bottom delay={i * 200} key={p.id}>

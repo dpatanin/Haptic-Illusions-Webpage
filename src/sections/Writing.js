@@ -132,7 +132,7 @@ MorePosts.propTypes = {
 
 const edgeToArray = data => data.edges.map(edge => edge.node);
 
-const Writing = () => (
+const RelatedWork = () => (
   <StaticQuery
     query={graphql`
       query MediumPostQuery {
@@ -145,21 +145,27 @@ const Writing = () => (
     `}
     render={({ site }) => {
 
-      return ((
-          <Section.Container id="writing" Background={Background}>
-            <Section.Header name="Writing" icon="✍️" label="writing" />
-            {/* <CardContainer minWidth="300px">
-              {posts.map(({ Component, ...rest }) => (
-                <Fade bottom key={rest.id}>
-                  <Component {...rest} key={rest.id} />
-                </Fade>
-              ))}
-            </CardContainer> */}
-          </Section.Container>
-        )
+      return (
+        <Section.Container id="writing" Background={Background}>
+          <Section.Header name="Related Work" icon="✍️" label="writing" />
+          <CardContainer minWidth="300px">
+            <Fade bottom>
+              <Card>
+                <h2>Test Two</h2>
+                <img src="https://cdn-images-1.medium.com/max/400/1*ufP5nfg3eLEkIrqKB2i8mw.jpeg"></img>
+                <div>Test text</div>
+              </Card>
+              <Card>
+                <h2>Test One</h2>
+                <img src="https://cdn-images-1.medium.com/max/400/1*ufP5nfg3eLEkIrqKB2i8mw.jpeg"></img>
+                <div>Test text</div>
+              </Card>
+            </Fade>
+          </CardContainer>
+        </Section.Container>
       );
     }}
   />
 );
 
-export default Writing;
+export default RelatedWork;

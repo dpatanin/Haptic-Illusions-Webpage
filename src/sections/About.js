@@ -41,24 +41,23 @@ const ProfilePicture = styled(Image)`
   }
 `;
 
+const input = '# This is a header\n\nAnd this is a paragraph';
+
 const About = () => (
   <Section.Container id="about" Background={Background}>
     <Section.Header name="About me" icon="🙋‍♂️" label="person" />
     <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
       <Box width={[1, 1, 4 / 6]} px={[1, 2, 4]}>
         <Fade bottom>
-          <ReactMarkdown
-            source='../pages/aboutContent.md'
-            renderers={markdownRenderer}
-          />
+          <ReactMarkdown source={input} renderers={markdownRenderer} />
         </Fade>
       </Box>
 
       <Box width={[1, 1, 2 / 6]} style={{ maxWidth: '300px', margin: 'auto' }}>
         <Fade right>
           <ProfilePicture
-            src='../components/Logo/Gatsby.svg'
-            alt='altText'
+            src="../components/Logo/Gatsby.svg"
+            alt="altText"
             mt={[4, 4, 0]}
             ml={[0, 0, 1]}
           />
