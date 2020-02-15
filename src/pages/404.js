@@ -1,51 +1,20 @@
 import React from 'react';
-import { Heading, Box } from 'rebass';
+
 import Layout from '../components/Layout';
-import Section from '../components/Section';
-import Triangle from '../components/Triangle';
 
-const Background = () => (
-  <div>
-    <Triangle
-      color="backgroundDark"
-      height={['35vh', '80vh']}
-      width={['95vw', '60vw']}
-    />
-
-    <Triangle
-      color="primary"
-      height={['25vh', '35vh']}
-      width={['75vw', '60vw']}
-      invertX
-    />
-
-    <Triangle
-      color="secondaryLight"
-      height={['10vh', '20vh']}
-      width={['50vw', '50vw']}
-      invertX
-      invertY
-    />
-  </div>
-);
-
-const NotFoundPage = () => (
+const IndexPage = () => (
   <Layout>
-    <Section.Container id="404" Background={Background}>
-      <Box width={[320, 400, 600]} m="auto">
-        <Heading
-          color="primaryDark"
-          fontSize={['9rem', '13rem', '16rem']}
-          as="h1"
-        >
-          404
-        </Heading>
-        <Heading color="secondary" fontSize={['4rem', '5rem', '6rem']} as="h2">
-          There isn&apos;t anything here
-        </Heading>
-      </Box>
-    </Section.Container>
+    <div id="main">
+      <div className="box container">
+        <header className="major">
+          <h2>NOT FOUND</h2>
+        </header>
+        <section>
+          <h4>Not a valid URL</h4>
+        </section>
+      </div>
+    </div>
   </Layout>
 );
 
-export default NotFoundPage;
+export default IndexPage;

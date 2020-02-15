@@ -1,43 +1,25 @@
-const manifestConfig = require('./manifest-config');
-require('dotenv').config();
-
-const getAboutEntry = entry => entry.sys.contentType.sys.id === 'about';
+const config = require('./config');
 
 module.exports = {
+  pathPrefix: config.pathPrefix,
   siteMetadata: {
-    title: `Gatsby`,
-    siteUrl: `https://confident-mayer-97f337.netlify.com/`,
-    description: `Blazing fast modern site generator for React`,
+    title: config.siteTitle,
   },
   plugins: [
-    `gatsby-plugin-sass`,
     'gatsby-plugin-react-helmet',
     {
-      resolve: 'gatsby-plugin-web-font-loader',
+      resolve: `gatsby-plugin-manifest`,
       options: {
-        google: {
-          families: ['Cabin', 'Open Sans'],
-        },
+        name: config.manifestName,
+        short_name: config.manifestShortName,
+        start_url: config.pathPrefix || config.manifestStartUrl,
+        background_color: config.manifestBackgroundColor,
+        theme_color: config.manifestThemeColor,
+        display: config.manifestDisplay,
+        icon: config.manifestIcon, // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: 'gatsby-plugin-manifest',
-      options: manifestConfig,
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/pages`,
-        name: 'pages',
-      },
-    },
-    'gatsby-plugin-styled-components',
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        excerpt_separator: `<!-- end -->`,
-      },
-    },
+    'gatsby-plugin-sass',
     'gatsby-plugin-offline',
   ],
 };

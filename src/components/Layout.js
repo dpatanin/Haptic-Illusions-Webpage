@@ -1,55 +1,64 @@
-import React, { useEffect } from 'react';
-import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { ScrollingProvider } from 'react-scroll-section';
-import config from 'react-reveal/globals';
-import colors from '../../colors';
-import Helmet from './Helmet';
+import Helmet from 'react-helmet';
+import { StaticQuery, graphql } from 'gatsby';
 
-const GlobalStyle = createGlobalStyle`
-  *,
-  *::after,
-  *::before { 
-    box-sizing: inherit;
-    }
+import '../assets/sass/main.scss';
 
-  body {
-    box-sizing: border-box; 
-    margin: 0;
-    font-family: Cabin, 'Open Sans', sans-serif;
-    font-display: swap;
-    font-display: fallback;
-    overflow-x: hidden;
+class Layout extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isPreloaded: true,
+    };
   }
-`;
 
-config({ ssrFadeout: true });
+  componentDidMount() {
+    this.timeoutId = setTimeout(() => {
+      this.setState({ isPreloaded: false });
+    }, 100);
+  }
 
-const loadScript = src => {
-  const tag = document.createElement('script');
-  tag.src = src;
-  tag.defer = true;
+  componentWillUnmount() {
+    if (this.timeoutId) {
+      clearTimeout(this.timeoutId);
+    }
+  }
 
-  document.getElementsByTagName('body')[0].appendChild(tag);
-};
-
-const Layout = ({ children }) => {
-  useEffect(() => {
-    loadScript('https://use.fontawesome.com/fd58d214b9.js');
-  }, []);
-
-  return (
-    <main>
-      <GlobalStyle />
-      <ThemeProvider theme={{ colors }}>
-        <ScrollingProvider>
-          <Helmet />
-          {children}
-        </ScrollingProvider>
-      </ThemeProvider>
-    </main>
-  );
-};
+  render() {
+    const { children } = this.props;
+    const { isPreloaded } = this.state;
+    return (
+      <StaticQuery
+        query={graphql`
+          query SiteTitleQuery {
+            site {
+              siteMetadata {
+                title
+              }
+            }
+          }
+        `}
+        render={data => (
+          <>
+            <Helmet
+              title={data.site.siteMetadata.title}
+              meta={[
+                { name: 'description', content: 'Directive' },
+                { name: 'keywords', content: 'site, web' },
+              ]}
+            >
+              <html lang="en" />
+            </Helmet>
+            <div className={isPreloaded ? 'main-body is-preload' : 'main-body'}>
+              {children}
+            </div>
+          </>
+        )}
+      />
+    );
+  }
+}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
