@@ -66,21 +66,80 @@ const IndexPage = () => (
           </div>
         </section>
       </div>
-
       <footer className="major container medium">
-        <h3>Get shady with this starter</h3>
-        <p>
-          There is also elements page in this template. Click below button to
-          check
-        </p>
-        <ul className="actions special">
-          <li>
-            <Link to="/Elements" className="button">
-              View Elements
-            </Link>
-          </li>
-        </ul>
+        <h1>
+          Related Work
+          <br />&<br />
+          Inspiration
+        </h1>
       </footer>
+      <div className="box alt container">
+        <section className="feature left">
+          <iframe
+            className="image"
+            width="50%"
+            height="100%"
+            src="https://www.youtube.com/embed/IMiHyTDCE4o"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <div className="content">
+            <h3>
+              <a href="https://www.uni-ulm.de/fileadmin/website_uni_ulm/iui.inst.100/institut/mitarbeiterbereiche/rietzler/ConveyingThePerception.pdf">
+                The First Thing
+              </a>
+            </h3>
+            <p>
+              Vitae natoque dictum etiam semper magnis enim feugiat amet
+              curabitur tempor orci penatibus. Tellus erat mauris ipsum
+              fermentum etiam vivamus eget. Nunc nibh morbi quis fusce lacus.
+            </p>
+          </div>
+        </section>
+        <section className="feature right">
+          <iframe
+            className="image"
+            width="50%"
+            height="100%"
+            src="https://www.youtube.com/embed/CrQydnzpBdo"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <div className="content">
+            <h3>The Second Thing</h3>
+            <p>
+              Vitae natoque dictum etiam semper magnis enim feugiat amet
+              curabitur tempor orci penatibus. Tellus erat mauris ipsum
+              fermentum etiam vivamus eget. Nunc nibh morbi quis fusce lacus.
+            </p>
+          </div>
+        </section>
+        <section className="feature left">
+          <iframe
+            className="image"
+            width="50%"
+            height="100%"
+            src="https://www.youtube.com/embed/-irhq_-PnkQ"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <div className="content">
+            <h3>
+              <a href="https://dl.acm.org/doi/pdf/10.1145/3173574.3173724?download=true">
+                The Third Thing
+              </a>
+            </h3>
+            <p>
+              Vitae natoque dictum etiam semper magnis enim feugiat amet
+              curabitur tempor orci penatibus. Tellus erat mauris ipsum
+              fermentum etiam vivamus eget. Nunc nibh morbi quis fusce lacus.
+            </p>
+          </div>
+        </section>
+      </div>
     </div>
     <Footer />
   </Layout>

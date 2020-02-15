@@ -352,6 +352,9 @@
 	}
 
 	footer {
+		h1 {
+			font-size: 28px;
+		}
 		text-align: center;
 
 		&.major {
@@ -902,6 +905,11 @@
 					right: 0;
 					top: 0;
 				}
+
+				iframe {
+					right: 0;
+					top: 0;
+				}
 			}
 
 			.content {
@@ -917,6 +925,11 @@
 
 				img {
 					left: 0;
+					top: 0;
+				}
+
+				iframe {
+					right: 0;
 					top: 0;
 				}
 			}
