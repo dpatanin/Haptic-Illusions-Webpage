@@ -11,8 +11,6 @@ import pic2 from '../assets/images/pic02.jpg';
 import pic3 from '../assets/images/pic03.jpg';
 import newTab from '../assets/images/open_in_new-24px.svg';
 
-import hciVideo from '../assets/images/HCI_feddich.mp4';
-
 const IndexPage = () => (
   <Layout>
     <Header />
