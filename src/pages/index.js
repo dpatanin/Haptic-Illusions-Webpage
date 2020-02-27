@@ -60,7 +60,7 @@ const IndexPage = () => (
             className="image"
             width="50%"
             height="100%"
-            src={hciVideo}
+            src="https://www.youtube.com/embed/oy_F6FqxFjA"
             frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
@@ -68,7 +68,8 @@ const IndexPage = () => (
           <div className="content">
             <h3>Example Trial</h3>
             <p>
-              The split view of the concept for the minimized trials. A simplified version of the studies original intent.
+              The split view of the concept for the minimized trials. A
+              simplified version of the studies original intent.
             </p>
           </div>
         </section>
