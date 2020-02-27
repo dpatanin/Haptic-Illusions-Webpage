@@ -9,6 +9,7 @@ import Footer from '../components/Footer';
 import pic1 from '../assets/images/pic01.jpg';
 import pic2 from '../assets/images/pic02.jpg';
 import pic3 from '../assets/images/pic03.jpg';
+import newTab from '../assets/images/open_in_new-24px.svg';
 
 const IndexPage = () => (
   <Layout>
@@ -87,7 +88,7 @@ const IndexPage = () => (
           <div className="content">
             <h3>
               <a href="https://www.uni-ulm.de/fileadmin/website_uni_ulm/iui.inst.100/institut/mitarbeiterbereiche/rietzler/ConveyingThePerception.pdf">
-                The First Thing
+                The First Thing <img src={newTab} />
               </a>
             </h3>
             <p>
@@ -129,7 +130,7 @@ const IndexPage = () => (
           <div className="content">
             <h3>
               <a href="https://dl.acm.org/doi/pdf/10.1145/3173574.3173724?download=true">
-                The Third Thing
+                The Third Thing <img src={newTab} />
               </a>
             </h3>
             <p>

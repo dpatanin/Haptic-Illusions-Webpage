@@ -4,8 +4,8 @@ import config from '../../config';
 export default function Footer() {
   return (
     <div id="footer">
-      {/* <div className="container medium">
-        <header className="major last">
+      <div className="container medium">
+        {/* <header className="major last">
           <h2>Questions or comments?</h2>
         </header>
 
@@ -24,7 +24,7 @@ export default function Footer() {
               </li>
             );
           })}
-        </ul>
+        </ul> */}
 
         <ul className="copyright">
           <li>&copy; Directive. All rights reserved.</li>
@@ -32,7 +32,7 @@ export default function Footer() {
             Design: <a href="http://html5up.net">HTML5 UP</a>
           </li>
         </ul>
-      </div> */}
+      </div>
     </div>
   );
 }
