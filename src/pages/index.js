@@ -11,6 +11,8 @@ import pic2 from '../assets/images/pic02.jpg';
 import pic3 from '../assets/images/pic03.jpg';
 import newTab from '../assets/images/open_in_new-24px.svg';
 
+import hciVideo from '../assets/images/HCI_feddich.mp4';
+
 const IndexPage = () => (
   <Layout>
     <Header />
@@ -54,15 +56,19 @@ const IndexPage = () => (
           </div>
         </section>
         <section className="feature left">
-          <a href="/#" className="image icon fa-mobile">
-            <img src={pic3} alt="" />
-          </a>
+          <iframe
+            className="image"
+            width="50%"
+            height="100%"
+            src={hciVideo}
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
           <div className="content">
-            <h3>The Third Thing</h3>
+            <h3>Example Trial</h3>
             <p>
-              Vitae natoque dictum etiam semper magnis enim feugiat amet
-              curabitur tempor orci penatibus. Tellus erat mauris ipsum
-              fermentum etiam vivamus eget. Nunc nibh morbi quis fusce lacus.
+              The split view of the concept for the minimized trials. A simplified version of the studies original intent.
             </p>
           </div>
         </section>
@@ -87,14 +93,18 @@ const IndexPage = () => (
           ></iframe>
           <div className="content">
             <h3>
-              <a href="https://www.uni-ulm.de/fileadmin/website_uni_ulm/iui.inst.100/institut/mitarbeiterbereiche/rietzler/ConveyingThePerception.pdf">
-                The First Thing <img src={newTab} />
+              <a
+                target="_blank"
+                href="https://www.uni-ulm.de/fileadmin/website_uni_ulm/iui.inst.100/institut/mitarbeiterbereiche/rietzler/ConveyingThePerception.pdf"
+              >
+                Kinesthetic Feedback <img src={newTab} />
               </a>
             </h3>
             <p>
-              Vitae natoque dictum etiam semper magnis enim feugiat amet
-              curabitur tempor orci penatibus. Tellus erat mauris ipsum
-              fermentum etiam vivamus eget. Nunc nibh morbi quis fusce lacus.
+              "While most systems include and make use of the possibility to
+              create tactile feedback through vibration, kinesthetic feedback
+              systems almost exclusively rely on external mechanical hardware to
+              induce actual sensations so far."
             </p>
           </div>
         </section>
@@ -109,11 +119,21 @@ const IndexPage = () => (
             allowfullscreen
           ></iframe>
           <div className="content">
-            <h3>The Second Thing</h3>
+            <h3>
+              <a
+                target="_blank"
+                href="https://ieeexplore.ieee.org/document/6184193"
+              >
+                Redirected Touch <img src={newTab} />
+              </a>
+            </h3>
             <p>
-              Vitae natoque dictum etiam semper magnis enim feugiat amet
-              curabitur tempor orci penatibus. Tellus erat mauris ipsum
-              fermentum etiam vivamus eget. Nunc nibh morbi quis fusce lacus.
+              "This paper instead further explores Redirected Touching, a
+              perception-based technique for addressing the inflexibility of
+              passive haptic displays [..]. The technique generates different
+              mappings between real and virtual space such that a single real
+              object can provide haptic feedback for many differently shaped
+              virtual objects."
             </p>
           </div>
         </section>
@@ -129,14 +149,17 @@ const IndexPage = () => (
           ></iframe>
           <div className="content">
             <h3>
-              <a href="https://dl.acm.org/doi/pdf/10.1145/3173574.3173724?download=true">
-                The Third Thing <img src={newTab} />
+              <a
+                target="_blank"
+                href="https://dl.acm.org/doi/pdf/10.1145/3173574.3173724?download=true"
+              >
+                Visuo-Haptic Illusions <img src={newTab} />
               </a>
             </h3>
             <p>
-              Vitae natoque dictum etiam semper magnis enim feugiat amet
-              curabitur tempor orci penatibus. Tellus erat mauris ipsum
-              fermentum etiam vivamus eget. Nunc nibh morbi quis fusce lacus.
+              "In this work, we utilize visuo-haptic illusions to improve the
+              perceived performance of encountered-type haptic devices,
+              specifically shape displays, in virtual reality."
             </p>
           </div>
         </section>
