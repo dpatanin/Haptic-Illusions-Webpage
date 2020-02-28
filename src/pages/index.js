@@ -2,13 +2,10 @@ import React from 'react';
 
 import Layout from '../components/Layout';
 
-import { Link } from 'gatsby';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-import pic1 from '../assets/images/pic01.jpg';
-import pic2 from '../assets/images/pic02.jpg';
-import pic3 from '../assets/images/pic03.jpg';
+import doc from '../assets/images/document.jpeg';
 import newTab from '../assets/images/open_in_new-24px.svg';
 
 const IndexPage = () => (
@@ -28,15 +25,25 @@ const IndexPage = () => (
 
       <div className="box alt container">
         <section className="feature left">
-          <a href="/#" className="image icon fa-signal">
-            <img src={pic1} alt="" />
+          <a
+            href="HCI_Project_Report_Haptic_Illusion.pdf"
+            className="image icon fa-file"
+            download
+          >
+            <img src={doc} alt="" />
           </a>
           <div className="content">
-            <h3>The First Thing</h3>
+            <h3>
+              <a href="HCI_Project_Report_Haptic_Illusion.pdf" download>
+                Haptic Illusions <img src={newTab} />
+              </a>
+            </h3>
             <p>
-              Vitae natoque dictum etiam semper magnis enim feugiat amet
-              curabitur tempor orci penatibus. Tellus erat mauris ipsum
-              fermentum etiam vivamus eget. Nunc nibh morbi quis fusce lacus.
+              "In this project we examine the effects of visual perception
+              measured against the sensation of haptic feedback in virtual
+              reality (VR). Our main goal is to check for thresholds at which a
+              user will not be able to differentiate between the feeling of a
+              real-world object and their deformed representation in VR."
             </p>
           </div>
         </section>
