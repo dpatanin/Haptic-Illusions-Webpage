@@ -7,6 +7,7 @@ import Footer from '../components/Footer';
 
 import doc from '../assets/images/document.jpeg';
 import newTab from '../assets/images/open_in_new-24px.svg';
+import pdf from '../assets/images/HCI_Project_Report_Haptic_Illusion.pdf';
 
 const IndexPage = () => (
   <Layout>
@@ -26,7 +27,7 @@ const IndexPage = () => (
       <div className="box alt container">
         <section className="feature left">
           <a
-            href="HCI_Project_Report_Haptic_Illusion.pdf"
+            href={pdf}
             className="image icon fa-file"
             download
           >
@@ -34,7 +35,7 @@ const IndexPage = () => (
           </a>
           <div className="content">
             <h3>
-              <a href="HCI_Project_Report_Haptic_Illusion.pdf" download>
+              <a href={pdf} download>
                 Haptic Illusions <img src={newTab} />
               </a>
             </h3>
