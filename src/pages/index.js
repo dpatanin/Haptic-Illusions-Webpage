@@ -41,19 +41,6 @@ const IndexPage = () => (
           </div>
         </section>
         <section className="feature right">
-          <a href="/#" className="image icon fa-code">
-            <img src={pic2} alt="" />
-          </a>
-          <div className="content">
-            <h3>The Second Thing</h3>
-            <p>
-              Vitae natoque dictum etiam semper magnis enim feugiat amet
-              curabitur tempor orci penatibus. Tellus erat mauris ipsum
-              fermentum etiam vivamus eget. Nunc nibh morbi quis fusce lacus.
-            </p>
-          </div>
-        </section>
-        <section className="feature left">
           <iframe
             className="image"
             width="50%"
